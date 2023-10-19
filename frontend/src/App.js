@@ -43,7 +43,6 @@ function App() {
     function deleteContact(id)
     {
         fetch('http://localhost:5000/api/contacts/' + id, {method: 'DELETE'})
-        // .then(response => response.json())
         .then(() => console.log("Removed contact ", id ))
         .then(() => fetchContacts())
     }

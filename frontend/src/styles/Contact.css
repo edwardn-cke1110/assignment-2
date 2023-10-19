@@ -37,12 +37,12 @@ h3 {
     margin:10px 0px;    
 }
 
-#phone-name-textbox, #phone-number-textbox
+.textbox
 {
     margin: 2px;
 }
 
-#phone-name-textbox, #phone-number-textbox, .add-btn
+.textbox, .add-btn
 {
     flex-grow: 1;
     margin: 3px 2px;

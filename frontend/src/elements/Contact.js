@@ -9,11 +9,13 @@ function Contact(props)
     const [phones, setPhones] = useState([]);
     const fetchUrl = 'http://localhost/api/contacts/' + props.id;
 
-    // eslint-disable-next-line
+    const nameTextbox = props.id + '-phone-name-textbox';
+    const numberTextbox = props.id + '-phone-number-textbox';
+
     useEffect(() => {
         fetchPhones();
     }, []);
-
+    
     function fetchPhones()
     {
         fetch(fetchUrl + '/phones')
@@ -34,8 +36,8 @@ function Contact(props)
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                name: document.getElementById('phone-name-textbox').value,
-                number: document.getElementById('phone-number-textbox').value
+                name: document.getElementById(nameTextbox).value,
+                number: document.getElementById(numberTextbox).value
             })
         };
 
@@ -83,9 +85,9 @@ function Contact(props)
                     <h3 onClick={toggleOpened}>{props.name}</h3>
                     <Button title='Delete' onClick={props.delete} className='delete-btn'/>
                 </div>
-                <div class='phone-input'>
-                    <input id="phone-name-textbox" placeholder="Name"></input>
-                    <input id="phone-number-textbox" placeholder="Number"></input>
+                <div className='phone-input'>
+                    <input className="textbox" id={nameTextbox} placeholder="Name"></input>
+                    <input className="textbox" id={numberTextbox} placeholder="Number"></input>
                     <Button title="Add" onClick={addPhone} className='add-btn'/>
                 </div>
                 <div className="phone-list">
