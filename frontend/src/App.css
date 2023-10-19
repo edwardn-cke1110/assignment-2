@@ -1,0 +1,35 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root
+{
+    display: flex;
+    justify-content: center;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 550px;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+}
+
+#header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 20px;
+    margin: 10px;
+    border-color: black;
+}
