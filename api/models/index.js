@@ -24,7 +24,9 @@ db.contacts = require("./contact.model.js")(sequelize, Sequelize);
 db.phones = require("./phone.model.js")(sequelize, Sequelize);
 
 // Associations
-db.contacts.hasMany(db.phones);
+db.contacts.hasMany(db.phones, {
+  foreignKey: 'contactId'
+});
 db.phones.belongsTo(db.contacts);
 
 module.exports = db;
