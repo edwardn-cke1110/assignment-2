@@ -9,10 +9,11 @@ function Contact(props)
     const [phones, setPhones] = useState([]);
     const fetchUrl = 'http://localhost/api/contacts/' + props.id;
 
+    // eslint-disable-next-line
     useEffect(() => {
         fetchPhones();
     }, []);
-    
+
     function fetchPhones()
     {
         fetch(fetchUrl + '/phones')
@@ -69,7 +70,7 @@ function Contact(props)
             <div className="contact-card" key={props.id}>
                 <div className="contact-top">
                     <h3 onClick={toggleOpened}>{props.name}</h3>
-                    <Button title='Delete' onClick={props.delete}/>
+                    <Button title='Delete' onClick={props.delete} className='delete-btn'/>
                 </div>
             </div>
         )
@@ -80,12 +81,12 @@ function Contact(props)
             <div className="contact-card opened" key={props.id} >
                 <div className="contact-top">
                     <h3 onClick={toggleOpened}>{props.name}</h3>
-                    <Button title='Delete' onClick={props.delete}/>
+                    <Button title='Delete' onClick={props.delete} className='delete-btn'/>
                 </div>
-                <div>
+                <div class='phone-input'>
                     <input id="phone-name-textbox" placeholder="Name"></input>
                     <input id="phone-number-textbox" placeholder="Number"></input>
-                    <Button title="Add" onClick={addPhone}/>
+                    <Button title="Add" onClick={addPhone} className='add-btn'/>
                 </div>
                 <div className="phone-list">
                     <table>

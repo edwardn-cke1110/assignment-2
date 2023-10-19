@@ -7,7 +7,7 @@ function Phone(props)
         <tr>
             <td>{props.name}</td>
             <td>{props.number}</td>
-            <td><Button title='Delete' onClick={props.delete}/></td>
+            <td><Button title='Delete' onClick={props.delete} className='delete-btn'/></td>
         </tr>
     )
 }

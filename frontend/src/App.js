@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';  // import useEffect
-import Heading from './elements/Heading';
+import { useState, useEffect } from 'react'; 
 import Button from './elements/Button';
 import Contact from './elements/Contact';
 import './App.css';
@@ -57,9 +56,9 @@ function App() {
     return (
         <div id="main">
             <div id="header">
-                <Heading content="Contacts"/>
+                <h1>Contacts</h1>
                 <input id="contact-name-textbox" type="text" placeholder='Contact Name'></input>
-                <Button title="Create Contact" onClick={addContact}/>
+                <Button title="Create Contact" onClick={addContact} className='add-btn'/>
             </div>
             <div id="contact-list">
                 {listContacts}

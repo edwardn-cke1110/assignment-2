@@ -4,13 +4,15 @@
     margin: 10px;
     border-style: solid;
     border-color: black;
+    border-radius: 5px;
     border-width: 2px;
 }
 
 h3 {
     padding: 0;
-    margin: 0;
+    margin: 10px 0px;
     cursor: pointer;
+    flex-grow: 1;
 }
 
 .opened .contact-top
@@ -25,5 +27,23 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0px;
+    margin: 10px 0px;
+}
+
+.phone-input
+{   
+    display: flex;
+    justify-content: space-between;
+    margin:10px 0px;    
+}
+
+#phone-name-textbox, #phone-number-textbox
+{
+    margin: 2px;
+}
+
+#phone-name-textbox, #phone-number-textbox, .add-btn
+{
+    flex-grow: 1;
+    margin: 3px 2px;
 }

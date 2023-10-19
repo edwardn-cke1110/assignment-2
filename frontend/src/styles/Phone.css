@@ -6,3 +6,8 @@ table, tbody, th, td {
 table{
     width: 100%;
 }
+
+.delete-btn
+{
+    justify-self: center;
+}
